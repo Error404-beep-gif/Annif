@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire MAFD ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: white;
+            font-size: 64px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .heart {
+            color: red;
+            font-size: 80px;
+            animation: beat 1s infinite alternate;
+        }
+        @keyframes beat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.3);
+            }
+        }
+        .message-container {
+            position: relative;
+            z-index: 10;
+        }
+        .message-container p {
+            font-size: 18px;
+            color: white;
+            margin-top: 10px;
+        }
+        .balloons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .balloon {
+            position: absolute;
+            bottom: -200px;
+            width: 80px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ff6347;
+            animation: float 10s ease-in-out infinite;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: #aaa;
+        }
+        .balloon:nth-child(2) {
+            background-color: #ffeb3b;
+            animation-duration: 8s;
+            animation-delay: 2s;
+            width: 60px;
+            height: 90px;
+        }
+        .balloon:nth-child(3) {
+            background-color: #4caf50;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+        .balloon:nth-child(4) {
+            background-color: #f44336;
+            animation-duration: 7s;
+            animation-delay: 1.5s;
+            width: 50px;
+            height: 70px;
+        }
+        .balloon:nth-child(5) {
+            background-color: #3f51b5;
+            animation-duration: 11s;
+            animation-delay: 3s;
+            width: 70px;
+            height: 100px;
+        }
+        @keyframes float {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            50% {
+                transform: translateX(100px) translateY(-200px);
+            }
+            100% {
+                transform: translateX(-100px) translateY(-400px);
+            }
+        }
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 0;
+        }
+        .stars span {
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 2px;
+            background: white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        .stars span:nth-child(odd) {
+            animation-duration: 7s;
+        }
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1>Joyeux Anniversaire MAFD ❤️</h1>
+        <p>Que cette journée soit remplie de joie et d'amour!</p>
+        <div class="heart">❤️</div>
+    </div>
+
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <div class="stars">
+        <span style="top: 10%; left: 20%;"></span>
+        <span style="top: 30%; left: 40%;"></span>
+        <span style="top: 50%; left: 60%;"></span>
+        <span style="top: 70%; left: 80%;"></span>
+        <span style="top: 90%; left: 50%;"></span>
+        <span style="top: 20%; left: 70%;"></span>
+    </div>
+</body>
+</html>
